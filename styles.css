@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #404041;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    color: #ef9d10;
+    margin-bottom: 20px;
+    font-family: fantasy;
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards; /* Animation for the title */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dice {
+    width: 150px;
+    height: 150px;
+    background-color: #FE2C55;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideInRight 1s ease forwards; /* Animation for the dice */
+    animation-delay: 1s; /* Delay the dice animation by 1 second */
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 5px; /* Adjust margin to add space between dots */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roll-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    background-color: #AAE847;
+    color: #020202;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideInBottom 1s ease forwards; /* Animation for the button */
+    animation-delay: 2s; /* Delay the button animation by 2 seconds */
+}
+
+.roll-button:hover {
+    background-color: white;
+    color: orangered;
+}
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInBottom {
+    0% { opacity: 0; transform: translateY(100%); }
+    100% { opacity: 1; transform: translateY(0); }
+}
